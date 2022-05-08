@@ -1,0 +1,21 @@
+et = 150 ** 5
+ma = 150 + 1
+flag = False  # Выход из циклов, если решение найдено
+for a in range(1, ma):
+    if flag: break
+    at = a ** 5
+    print(a, end='\r')
+    for b in range(a, ma):
+        abt = at + b ** 5
+        if flag or abt >= et: break  # Останов перебеора, если значение превышает ответ
+        for c in range(b, ma):
+            abct = abt + c ** 5
+            if flag or abct >= et: break  # Останов перебеора, если значение превышает ответ
+            for d in range(c, ma):
+                abcdt = abct + d ** 5
+                if int(abcdt ** 0.2) ** 5 == abcdt:  # Решение целочисленное?
+                    print()
+                    print(a, b, c, d, int(abcdt ** 0.2), a + b + c + d + int(abcdt ** 0.2))
+                    flag = True
+                    break
+                elif abcdt > et: break  # Останов перебеора, если значение превышает ответ
