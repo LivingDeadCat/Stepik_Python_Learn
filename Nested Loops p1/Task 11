@@ -1,0 +1,12 @@
+# have 100 rubs
+#bull = 10 rub, cow = 5 rub, calf = 0.5 rub
+#need 100 units of cattle
+
+max_bull = 100 // 10
+max_cow = 100 // 5
+max_calf = int(100 // 0.5)
+for bull in range(max_bull + 1):
+    for cow in range(max_cow + 1):
+        for calf in range(max_calf + 1):
+            if 10 * bull + 5 * cow + 0.5 * calf == 100 and bull + cow + calf == 100:
+                print('bulls: ', bull, ', cows: ', cow, ', calfs: ', calf, sep='')
