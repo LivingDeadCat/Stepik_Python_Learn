@@ -1,0 +1,17 @@
+# a^5 + b^5 + c^5 + d^5 = e^5
+# find a, b, c, d, e
+e = 0
+f = False
+for e in range(3, 151):
+    if f: break
+    for a in range(3, e):
+        if f: break
+        for b in range(3, a):
+            if f: break
+            for c in range(3, b):
+                if f: break
+                for d in range(3, c):
+                    if e == (a**5 + b**5 + c**5 + d**5) ** (0.2):
+                        print('a: ', a, ', b: ', b, ', c: ', c, ', d: ', d, ', e: ', e, '; sum_all = ', a+b+c+d+e, sep='')
+                        f = True
+                        break
